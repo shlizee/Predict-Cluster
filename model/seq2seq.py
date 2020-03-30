@@ -1,6 +1,6 @@
 import tensorflow as tf
 from tensorflow.python.ops.rnn import _transpose_batch_time
-from rnn_wrapper import LinearSpaceDecoderWrapper, ResidualWrapper
+from .rnn_wrapper import LinearSpaceDecoderWrapper, ResidualWrapper
 
 
 class Seq2SeqModel(object):
@@ -208,6 +208,23 @@ def get_session():
     config.gpu_options.allow_growth = True
     session = tf.Session(config=config)
     return session
+
+
+def get_feature(model,session,encoder_inputs,batch_size,seq_len,label):
+    """
+    Extract encoder last state as feature representation for the action
+    :param model:
+    :param session:
+    :param encoder_inputs:
+    :param batch_size:
+    :param seq_len:
+    :param label:
+    :return:
+    """
+    input_feed = {model.enc_in: encoder_inputs, model.seq_len: seq_len, model.label:label,model.batch_size:batch_size}
+    output_feed = [model.ref_final_state]
+    outputs = session.run(output_feed, input_feed)
+    return outputs[0]
 
 
 if __name__ == "__main__":
