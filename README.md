@@ -24,3 +24,15 @@ Other python scripts are extracted from the notebooks we wrote for NTU-RGBD 60 d
 3. scikit-learn 0.21.2
 4. matplotlib 3.1.0
 5. numpy 1.16.4
+
+## Citation
+
+Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (Arxiv; To appear in CVPR 2020)](https://arxiv.org/abs/1911.12409) if you use this code:
+```
+@inproceedings{su2020predict,
+  title={PREDICT \& CLUSTER: Unsupervised Skeleton Based Action Recognition},
+  author={Su, Kun and Liu, Xiulong and Shlizerman, Eli}
+  journal={CVPR, IEEE Computer Society Conference on Computer Vision and Pattern Recognition}
+  year={2020}
+}
+```
