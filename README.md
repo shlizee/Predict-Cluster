@@ -4,6 +4,9 @@
 This repository contains the code for the paper "PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition", which is available [here](https://arxiv.org/abs/1911.12409). To appear in CVPR 2020. 
 The unsupervised approach implements two strategies discussed in the paper, Fixed-state(FS) and Fixed-weight(FW). It is tested on NW-UCLA and NTU-RGBD(60) dataset.
 
+
+[![Alt text]()](https://www.youtube.com/watch?v=-dcCFUBRmwE)
+
 ## Abstract
 We propose a novel system for unsupervised skeleton-based action recognition. Given inputs of body-keypoints sequences obtained during various movements, 
 our system associates the sequences with actions. Our system is based on an encoder-decoder recurrent neural network, where the encoder learns a separable feature 
