@@ -27,7 +27,7 @@ Other python scripts are extracted from the notebooks we wrote for NTU-RGBD 60 d
 
 ## Citation
 
-Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (Arxiv; To appear in CVPR 2020)](https://arxiv.org/abs/1911.12409) if you use this code:
+Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (Arxiv; To appear in CVPR 2020)](https://arxiv.org/abs/1911.12409) when you use this code:
 ```
 @inproceedings{su2020predict,
   title={PREDICT \& CLUSTER: Unsupervised Skeleton Based Action Recognition},
