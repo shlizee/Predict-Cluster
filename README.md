@@ -26,7 +26,7 @@ Other python scripts are extracted from the notebooks we wrote for NTU-RGBD 60 d
 5. numpy 1.16.4
 
 ## NEWS
-PyTorch Implementation (by Jingyuan Li @christincha) is avaialable. The PyTorch implementation is part of extension of Predict-Cluster, Iterate-Cluster, to consider self-supervised active learning levarging Predict-Cluster. You can find more details about it here: https://arxiv.org/abs/2006.06911. Iterate-Cluster code will be  available soon in a new linked github repository.
+PyTorch Implementation (by Jingyuan Li @christincha) is avaialable. PyTorch implementation is part of extension of Predict-Cluster, Iterate-Cluster, to consider self-supervised active learning levarging Predict-Cluster. You can find more details about it here: https://arxiv.org/abs/2006.06911. Iterate-Cluster code will be  available soon in a new linked github repository.
 
 If you are using PyTorch, you may just need the ucla_github_pytorch folder. Please check the UCLA_Pytorch_Demo.ipynb for more details. The data for Pytorch implementation are preprocessed and saved as h5py files for PyTorch usage.
 
