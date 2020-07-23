@@ -25,6 +25,9 @@ Other python scripts are extracted from the notebooks we wrote for NTU-RGBD 60 d
 4. matplotlib 3.1.0
 5. numpy 1.16.4
 
+## NEWS
+PyTorch Implementation is out. If you are using PyTorch, you may just need the ucla_github_pytorch folder. Please check the UCLA_Pytorch_Demo.ipynb for more details. The data for Pytorch implementation are preprocessed and saved as h5py files for PyTorch usage.
+
 ## Citation
 
 Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (Arxiv; To appear in CVPR 2020)](https://arxiv.org/abs/1911.12409) when you use this code:
