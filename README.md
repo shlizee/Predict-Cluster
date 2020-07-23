@@ -1,8 +1,7 @@
 # Predict & Cluster
 
 ## Introduction
-This repository contains the code for the paper "PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition", which is available [here](https://arxiv.org/abs/1911.12409). To appear in CVPR 2020. 
-The unsupervised approach implements two strategies discussed in the paper, Fixed-state(FS) and Fixed-weight(FW). It is tested on NW-UCLA and NTU-RGBD(60) dataset.
+This repository contains the code for the paper "PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition", which is available [here](https://openaccess.thecvf.com/content_CVPR_2020/html/Su_PREDICT__CLUSTER_Unsupervised_Skeleton_Based_Action_Recognition_CVPR_2020_paper.html), published in CVPR 2020. The unsupervised approach implements two strategies discussed in the paper, Fixed-state(FS) and Fixed-weight(FW). It is tested on NW-UCLA and NTU-RGBD(60) dataset.
 
 
 [![Alt text](https://img.youtube.com/vi/-dcCFUBRmwE/0.jpg)](https://www.youtube.com/watch?v=-dcCFUBRmwE)
