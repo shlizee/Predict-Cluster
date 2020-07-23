@@ -26,16 +26,19 @@ Other python scripts are extracted from the notebooks we wrote for NTU-RGBD 60 d
 5. numpy 1.16.4
 
 ## NEWS
-PyTorch Implementation is out. If you are using PyTorch, you may just need the ucla_github_pytorch folder. Please check the UCLA_Pytorch_Demo.ipynb for more details. The data for Pytorch implementation are preprocessed and saved as h5py files for PyTorch usage.
+PyTorch Implementation (by Jingyuan Li @christincha) is avaialable. The PyTorch implementation is part of extension of Predict-Cluster, Iterate-Cluster, to consider self-supervised active learning levarging Predict-Cluster. You can find more details about it here: https://arxiv.org/abs/2006.06911. Iterate-Cluster code will be  available soon in a new linked github repository.
+
+If you are using PyTorch, you may just need the ucla_github_pytorch folder. Please check the UCLA_Pytorch_Demo.ipynb for more details. The data for Pytorch implementation are preprocessed and saved as h5py files for PyTorch usage.
 
 ## Citation
 
-Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (Arxiv; To appear in CVPR 2020)](https://arxiv.org/abs/1911.12409) when you use this code:
+Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (CVPR 2020)](https://openaccess.thecvf.com/content_CVPR_2020/html/Su_PREDICT__CLUSTER_Unsupervised_Skeleton_Based_Action_Recognition_CVPR_2020_paper.html) when you use this code:
 ```
 @inproceedings{su2020predict,
-  title={PREDICT \& CLUSTER: Unsupervised Skeleton Based Action Recognition},
-  author={Su, Kun and Liu, Xiulong and Shlizerman, Eli}
-  journal={CVPR, IEEE Computer Society Conference on Computer Vision and Pattern Recognition}
+  title={Predict \& cluster: Unsupervised skeleton based action recognition},
+  author={Su, Kun and Liu, Xiulong and Shlizerman, Eli},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9631--9640},
   year={2020}
 }
 ```
