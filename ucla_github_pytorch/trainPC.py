@@ -33,10 +33,10 @@ def train_iter(input_tensor, seq_len,  model, optimizer, criterion_seq):
     mask = torch.zeros([len(seq_len), max(seq_len)]).to(device)
     for ith_batch in range(len(seq_len)):
         mask[ith_batch, 0:seq_len[ith_batch]] = 1
-    mask_ = torch.sum(mask, 1)
+    mask = torch.sum(mask, 1)
 
-    total_loss = torch.sum(criterion_seq(de_out, input_tensor), 2)*mask
-    total_loss = torch.mean(torch.sum(total_loss, 1) / mask_)
+    total_loss = torch.sum(criterion_seq(de_out, input_tensor), 2)
+    total_loss = torch.mean(torch.sum(total_loss, 1) / mask)
     
     total_loss.backward()
     clip_grad_norm_(model.parameters(), 25 , norm_type=2)
@@ -52,10 +52,10 @@ def eval_iter(input_tensor, seq_len, model, criterion_seq):
     mask = torch.zeros([len(seq_len), max(seq_len)]).to(device)
     for ith_batch in range(len(seq_len)):
         mask[ith_batch, 0:seq_len[ith_batch]] = 1
-    mask_ = torch.sum(mask, 1)
+    mask = torch.sum(mask, 1)
 
-    total_loss = torch.sum(criterion_seq(de_out, input_tensor), 2)*mask
-    total_loss = torch.mean(torch.sum(total_loss, 1) / mask_)
+    total_loss = torch.sum(criterion_seq(de_out, input_tensor), 2)
+    total_loss = torch.mean(torch.sum(total_loss, 1) / mask)
 
     return total_loss, en_hi
 
