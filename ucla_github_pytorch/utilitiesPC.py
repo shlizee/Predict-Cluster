@@ -31,6 +31,11 @@ def save_checkpoint(model, epoch, optimizer, loss, PATH):
       'loss': loss,
     }, PATH)
 
+def load_checkpoint(model, optimizer, PATH):
+    data = torch.load(PATH)
+    model.load_state_dict(data['model_state_dict'])
+    optimizer.load_state_dict(data['optimizer_state_dict'])
+    return data['epoch'], data['loss']
 
 def asMinutes(s):
     m = math.floor(s / 60)
