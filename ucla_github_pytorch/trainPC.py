@@ -193,13 +193,22 @@ def clustering_knn_acc(model, train_loader, eval_loader, criterion , num_epoches
 
 def training(epoch, train_loader, eval_loader, print_every,
              model, optimizer, criterion_seq, file_output,
-             root_path, network, en_num_layers, hidden_size, num_class=10,
-             few_knn=False):
+             root_path, network, en_num_layers, hidden_size, 
+             load_saved=True, num_class=10, few_knn=False):
+
     auto_criterion = nn.MSELoss()
     start = time.time()
     lambda1 = lambda ith_epoch: 0.95 ** (ith_epoch // 50)
     model_scheduler = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda1)
     past_acc = 0
+
+    # Load a saved model
+    if load_saved:
+        for item in os.listdir(root_path + 'seq2seq_model/'):
+          if item.startswith('%slayer%d_hid%d' % (network, en_num_layers, hidden_size)):
+              # Pull the starting epoch from the file name
+              start_epoch = int(item.split('epoch')[-1])
+              epoch, ave_loss_train = load_checkpoint(model, optimizer, root_path + 'seq2seq_model/' + item)
 
     for ith_epoch in range(1, epoch + 1):
         if ith_epoch % print_every == 0 or ith_epoch == 1:
