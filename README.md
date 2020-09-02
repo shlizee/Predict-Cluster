@@ -29,6 +29,9 @@ PyTorch Implementation (by Jingyuan Li @christincha) is avaialable. PyTorch impl
 
 If you are using PyTorch, you may just need the ucla_github_pytorch folder. Please check the UCLA_Pytorch_Demo.ipynb for more details. The data for Pytorch implementation are preprocessed and saved as h5py files for PyTorch usage.
 
+## NTU data
+We share the preprocessed NTU data in [Google Drive](https://drive.google.com/drive/folders/1EJT84LjWB7PET_rYnK-6Jj3EbQvpmPG2?usp=sharing). The **raw_train/test_data.pkl** are cleaned data by removing the noise & multiple actors situations. The **trans_train/test_data.pkl** are data after applying **view invriant transform**. Check more details in the [example script](https://github.com/shlizee/Predict-Cluster/blob/master/preprocess/NTU_View_Invariant_Transform.ipynb).
+
 ## Citation
 
 Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (CVPR 2020)](https://openaccess.thecvf.com/content_CVPR_2020/html/Su_PREDICT__CLUSTER_Unsupervised_Skeleton_Based_Action_Recognition_CVPR_2020_paper.html) when you use this code:
