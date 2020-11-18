@@ -13,32 +13,6 @@ def load_data(path):
     return data
 
 
-def normalize_bone(video):
-    """
-
-    :param video:
-    :return:
-    """
-    bone_connect = [(0, 1), (1, 20), (20, 2), (2, 3), (20, 8), (8, 9), (9, 10), (10, 11), (11, 23), (11, 24), (20, 4), (4, 5), (5, 6), (6, 7), (7, 21), (7, 22), \
-                   (0, 16), (16, 17), (17, 18), (18, 19), (0, 12), (12, 13), (13, 14), (14, 15)]
-    new_video = np.zeros_like(video)
-    new_video[:,0:3] = video[:,0:3]
-    #     dif_norm_max = 0.
-    #     dif_norm_min = 100.
-    #     for bone in bone_connect:
-    #         tmp_max = np.amax(np.linalg.norm(video[:,bone[1]*3:bone[1]*3+3]-video[:,bone[0]*3:bone[0]*3+3], axis=1))
-    #         tmp_min = np.amin(np.linalg.norm(video[:,bone[1]*3:bone[1]*3+3]-video[:,bone[0]*3:bone[0]*3+3], axis=1))
-    #         if tmp_max > dif_norm_max:
-    #             dif_norm_max = tmp_max
-    #         if tmp_min < dif_norm_min:
-    #             dif_norm_min = tmp_min
-    for bone in bone_connect:
-        dif = video[:,bone[1]*3:bone[1]*3+3]-video[:,bone[0]*3:bone[0]*3+3]
-        dif_norm = np.linalg.norm(dif, axis=1)
-        new_video[:,bone[1]*3:bone[1]*3+3] = new_video[:,bone[0]*3:bone[0]*3+3]+ dif / np.expand_dims(dif_norm, axis=1) #* np.expand_dims((dif_norm / dif_norm_max),axis=1)
-    return new_video
-
-
 def normalize_video(video):
     """
 
@@ -145,12 +119,6 @@ def preprocess_pipeline(base_path, train_path, test_path, mode="cross_subject_da
     test_data = load_data(os.path.join(base_path, mode + "/" + test_path))
     print("Size of training data: ", len(train_data))
     print("Size of test data: ", len(test_data))
-    print("Start Normalizing Bones of performers ----")
-    # Normalize Bones
-    for i in range(len(train_data)):
-        train_data[i]['input'] = normalize_bone(np.array(train_data[i]['input']))
-    for i in range(len(test_data)):
-        test_data[i]['input'] = normalize_bone(np.array(test_data[i]['input']))
 
     print("Start Normalizing across all videos ----")
     # Normalize Videos
