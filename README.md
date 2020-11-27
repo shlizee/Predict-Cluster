@@ -32,6 +32,9 @@ If you are using PyTorch, you may just need the ucla_github_pytorch folder. Plea
 ## NTU data
 We share the preprocessed NTU data in [Google Drive](https://drive.google.com/drive/folders/1EJT84LjWB7PET_rYnK-6Jj3EbQvpmPG2?usp=sharing). The **raw_train/test_data.pkl** are cleaned data by removing the noise & multiple actors situations. The **trans_train/test_data.pkl** are data after applying **view invriant transform**. Check more details in the [example script](https://github.com/shlizee/Predict-Cluster/blob/master/preprocess/NTU_View_Invariant_Transform.ipynb).
 
+## UWA3D data
+Since the original link of UWA3D dataset is down, I upload the raw data and the View invariant transformed data to [Google Drive](https://drive.google.com/drive/folders/1_ZeEIBug_Wd5OyWHlxQZACYCOh1dbB12?usp=sharing). Hope it helps.
+
 ## Citation
 
 Please cite the [PREDICT & CLUSTER: Unsupervised Skeleton Based Action Recognition (CVPR 2020)](https://openaccess.thecvf.com/content_CVPR_2020/html/Su_PREDICT__CLUSTER_Unsupervised_Skeleton_Based_Action_Recognition_CVPR_2020_paper.html) when you use this code:
