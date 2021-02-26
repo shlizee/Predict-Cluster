@@ -56,7 +56,6 @@ def downsample(data, target_frame=50):
             dsamp.append(new_val)
         else:
             dsamp.append(val)
-        dsamp.append(val)
     return dsamp
 
 
