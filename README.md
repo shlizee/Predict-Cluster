@@ -30,10 +30,10 @@ PyTorch Implementation (by Jingyuan Li @christincha) is avaialable. PyTorch impl
 If you are using PyTorch, you may just need the ucla_github_pytorch folder. Please check the UCLA_Pytorch_Demo.ipynb for more details. The data for Pytorch implementation are preprocessed and saved as h5py files for PyTorch usage.
 
 ## NTU data
-We share the preprocessed NTU data in [Google Drive](https://drive.google.com/drive/folders/1EJT84LjWB7PET_rYnK-6Jj3EbQvpmPG2?usp=sharing). The **raw_train/test_data.pkl** are cleaned data by removing the noise & multiple actors situations. The **trans_train/test_data.pkl** are data after applying **view invriant transform**. Check more details in the [example script](https://github.com/shlizee/Predict-Cluster/blob/master/preprocess/NTU_View_Invariant_Transform.ipynb).
+Please download the NTU data from [their website](https://rose1.ntu.edu.sg/dataset/actionRecognition/). In [Google Drive](https://drive.google.com/drive/folders/1EJT84LjWB7PET_rYnK-6Jj3EbQvpmPG2?usp=sharing), the **raw_train/test_data.pkl** are cleaned data by removing the noise & multiple actors situations. The **trans_train/test_data.pkl** are data after applying **view invriant transform**. Check more details in the [example script](https://github.com/shlizee/Predict-Cluster/blob/master/preprocess/NTU_View_Invariant_Transform.ipynb).
 
 ## UWA3D data
-Since the original link of UWA3D dataset is down, I upload the raw data and the View invariant transformed data to [Google Drive](https://drive.google.com/drive/folders/1_ZeEIBug_Wd5OyWHlxQZACYCOh1dbB12?usp=sharing). Hope it helps.
+Please download the [UWA3D Multiview Activity II dataset](https://ieee-dataport.org/documents/uwa-3d-multiview-activity-ii-dataset#files) following the [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). The View invariant transformed data is available in [Google Drive](https://drive.google.com/drive/folders/1_ZeEIBug_Wd5OyWHlxQZACYCOh1dbB12?usp=sharing).
 
 ## Citation
 
